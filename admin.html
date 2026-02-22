@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Operations | Solace and Stone</title>
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Space+Grotesk:wght@400;500;600&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' href='css/styles.css'>
+  </head>
+  <body>
+    <header class='site-header'>
+      <div class='top-banner'>Free shipping on orders over $200. 30-day returns.</div>
+      <div class='container'>
+        <div class='nav-row'>
+          <a class='brand' href='index.html'>Solace and Stone</a>
+          <nav class='primary-nav' aria-label='Primary'>
+            <a href='collection.html?category=Living'>Living</a>
+            <a href='collection.html?category=Kitchen'>Kitchen</a>
+            <a href='collection.html?category=Bath'>Bath</a>
+            <a href='collection.html?category=Travel'>Travel</a>
+            <a href='collection.html'>Shop All</a>
+          </nav>
+          <div class='nav-actions'>
+            <button class='icon-btn' data-search-toggle>Search</button>
+            <a class='icon-btn' href='account.html'>Account</a>
+            <a class='icon-btn' href='cart.html'>Cart <span class='cart-count' id='cartCount'>0</span></a>
+            <button class='icon-btn menu-btn' data-menu-toggle>Menu</button>
+          </div>
+        </div>
+        <div class='search-panel' id='searchPanel'>
+          <form class='search-form' data-search-form>
+            <input type='search' name='q' placeholder='Search the entire studio' aria-label='Search products'>
+            <button class='btn small' type='submit'>Search</button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class='container admin' id='adminDashboard'>
+        <div class='section-head'>
+          <div>
+            <div class='eyebrow'>Operations</div>
+            <h1>Store performance</h1>
+          </div>
+          <div class='admin-actions'>
+            <span class='meta' id='adminDate'>Live snapshot</span>
+            <button class='btn ghost' id='exportOrders' type='button'>Export CSV</button>
+          </div>
+        </div>
+
+        <div class='admin-grid' id='adminStats'>
+          <div class='stat-card'>
+            <span class='meta'>Revenue</span>
+            <strong id='statRevenue'>$0</strong>
+          </div>
+          <div class='stat-card'>
+            <span class='meta'>Orders</span>
+            <strong id='statOrders'>0</strong>
+          </div>
+          <div class='stat-card'>
+            <span class='meta'>Avg. order</span>
+            <strong id='statAov'>$0</strong>
+          </div>
+          <div class='stat-card'>
+            <span class='meta'>Returning customers</span>
+            <strong id='statReturning'>0%</strong>
+          </div>
+        </div>
+
+        <div class='admin-panels'>
+          <div class='admin-card'>
+            <h3>Sales by category</h3>
+            <div class='bar-chart' id='salesChart'></div>
+          </div>
+          <div class='admin-card'>
+            <h3>Top products</h3>
+            <div class='summary-items' id='topProducts'></div>
+          </div>
+          <div class='admin-card'>
+            <h3>Low stock alerts</h3>
+            <div class='summary-items' id='lowStock'></div>
+          </div>
+          <div class='admin-card'>
+            <h3>Recent orders</h3>
+            <div class='summary-items' id='recentOrders'></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class='site-footer'>
+      <div class='container footer-grid'>
+        <div>
+          <div class='brand'>Solace and Stone</div>
+          <p>Modern heirlooms for rooms that breathe.</p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <a href='collection.html?category=Living'>Living</a>
+          <a href='collection.html?category=Kitchen'>Kitchen</a>
+          <a href='collection.html?category=Bath'>Bath</a>
+          <a href='collection.html?category=Travel'>Travel</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href='collection.html'>About</a>
+          <a href='collection.html'>Journal</a>
+          <a href='collection.html'>Careers</a>
+          <a href='collection.html'>Sustainability</a>
+          <a href='admin.html'>Operations</a>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <a href='collection.html'>Shipping</a>
+          <a href='collection.html'>Returns</a>
+          <a href='collection.html'>FAQ</a>
+          <a href='collection.html'>Contact</a>
+        </div>
+      </div>
+      <div class='footer-bottom'>© 2026 Solace and Stone. All rights reserved.</div>
+    </footer>
+
+    <div class='toast' id='toast'>Added to cart</div>
+    <script src='js/data.js'></script>
+    <script src='js/config.js'></script>
+    <script src='js/app.js'></script>
+  </body>
+</html>

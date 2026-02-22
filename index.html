@@ -1,0 +1,265 @@
+﻿<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Solace and Stone | Modern Home Studio</title>
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Space+Grotesk:wght@400;500;600&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' href='css/styles.css'>
+  </head>
+  <body>
+    <header class='site-header'>
+      <div class='top-banner'>Free shipping on orders over $200. 30-day returns.</div>
+      <div class='container'>
+        <div class='nav-row'>
+          <a class='brand' href='index.html'>Solace and Stone</a>
+          <nav class='primary-nav' aria-label='Primary'>
+            <a href='collection.html?category=Living'>Living</a>
+            <a href='collection.html?category=Kitchen'>Kitchen</a>
+            <a href='collection.html?category=Bath'>Bath</a>
+            <a href='collection.html?category=Travel'>Travel</a>
+            <a href='collection.html'>Shop All</a>
+          </nav>
+          <div class='nav-actions'>
+            <button class='icon-btn' data-search-toggle>Search</button>
+            <a class='icon-btn' href='account.html'>Account</a>
+            <a class='icon-btn' href='cart.html'>Cart <span class='cart-count' id='cartCount'>0</span></a>
+            <button class='icon-btn menu-btn' data-menu-toggle>Menu</button>
+          </div>
+        </div>
+        <div class='search-panel' id='searchPanel'>
+          <form class='search-form' data-search-form>
+            <input type='search' name='q' placeholder='Search the entire studio' aria-label='Search products'>
+            <button class='btn small' type='submit'>Search</button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class='container hero'>
+        <div class='hero-copy' data-reveal>
+          <div class='eyebrow'>New season drop</div>
+          <h1>Design-led essentials for the soft life at home.</h1>
+          <p class='hero-sub'>Curated furniture, kitchenware, and travel pieces crafted to feel timeless and warm. Build a space that restores you.</p>
+          <div class='hero-actions'>
+            <a class='btn primary' href='collection.html'>Shop the studio</a>
+            <a class='btn ghost' href='collection.html?category=Living'>Explore living</a>
+          </div>
+          <div class='hero-stats'>
+            <div>
+              <span class='stat-number'>4.9/5</span>
+              <span class='stat-label'>studio rating</span>
+            </div>
+            <div>
+              <span class='stat-number'>2 day</span>
+              <span class='stat-label'>premium delivery</span>
+            </div>
+            <div>
+              <span class='stat-number'>10k+</span>
+              <span class='stat-label'>homes styled</span>
+            </div>
+          </div>
+        </div>
+        <div class='hero-visual' data-reveal>
+          <div class='hero-card'>
+            <div class='hero-image'>
+              <img class='media-image' src='https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80' alt='Harbor Lounge Chair'>
+            </div>
+            <div class='hero-card-body'>
+              <h3>Harbor Lounge Chair</h3>
+              <p class='meta'>Statement seating with linen softness.</p>
+              <div class='price-row'>
+                <strong>$680</strong>
+                <a class='text-link' href='product.html?id=p001'>View details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class='trust-band'>
+        <div class='container trust-grid'>
+          <div data-reveal>
+            <h3>Hand-finished</h3>
+            <p class='meta'>Every piece is inspected and tuned in our studio.</p>
+          </div>
+          <div data-reveal>
+            <h3>Studio styling</h3>
+            <p class='meta'>Free virtual styling session with every order.</p>
+          </div>
+          <div data-reveal>
+            <h3>Transparent sourcing</h3>
+            <p class='meta'>We partner with small-batch artisans worldwide.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class='container'>
+        <div class='section-head'>
+          <div>
+            <div class='eyebrow'>Shop by room</div>
+            <h2>Build your sanctuary</h2>
+          </div>
+          <a class='text-link' href='collection.html'>See all collections</a>
+        </div>
+        <div class='grid-3'>
+          <a class='category-card' href='collection.html?category=Living' data-reveal>
+            <div class='category-media' style='--g1: #ead9c7; --g2: #a47052;'>
+              <img class='media-image' src='https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?auto=format&fit=crop&w=1200&q=80' alt='Living room seating'>
+            </div>
+            <div class='category-meta'>
+              <h3>Living</h3>
+              <p class='meta'>Sofas, tables, and soft sculptural seating.</p>
+            </div>
+          </a>
+          <a class='category-card' href='collection.html?category=Kitchen' data-reveal>
+            <div class='category-media' style='--g1: #dbe7ed; --g2: #6f92a3;'>
+              <img class='media-image' src='https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80' alt='Kitchen essentials'>
+            </div>
+            <div class='category-meta'>
+              <h3>Kitchen</h3>
+              <p class='meta'>Tabletop essentials and heirloom cookware.</p>
+            </div>
+          </a>
+          <a class='category-card' href='collection.html?category=Travel' data-reveal>
+            <div class='category-media' style='--g1: #cec7bb; --g2: #6a5e52;'>
+              <img class='media-image' src='https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80' alt='Travel gear'>
+            </div>
+            <div class='category-meta'>
+              <h3>Travel</h3>
+              <p class='meta'>Carry-on luxuries for every itinerary.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class='container'>
+        <div class='section-head'>
+          <div>
+            <div class='eyebrow'>Featured</div>
+            <h2>Studio favorites right now</h2>
+          </div>
+          <a class='text-link' href='collection.html'>Shop all</a>
+        </div>
+        <div id='featuredGrid' class='product-grid'></div>
+      </section>
+
+      <section class='story'>
+        <div class='container story-grid'>
+          <div data-reveal>
+            <div class='eyebrow'>Our story</div>
+            <h2>We craft calm for the modern home.</h2>
+            <p>Solace and Stone is a design studio focused on slow interiors. Each piece is produced in small runs, tested for durability, and meant to be loved for years.</p>
+            <p class='story-quote'>Designed in California, built with artisans worldwide.</p>
+            <a class='text-link' href='collection.html'>Discover the studio</a>
+          </div>
+          <div class='story-card' data-reveal>
+            <div class='story-image'>
+              <img class='media-image' src='https://images.unsplash.com/photo-1449247709967-d4461a6a6103?auto=format&fit=crop&w=1200&q=80' alt='Studio materials'>
+            </div>
+            <h3>Materials with memory</h3>
+            <p>Natural woods, warm metals, and easy-care textiles that only get better with time.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class='container'>
+        <div class='section-head'>
+          <div>
+            <div class='eyebrow'>Studio picks</div>
+            <h2>Pieces we are styling right now</h2>
+          </div>
+          <a class='text-link' href='collection.html'>Browse the edit</a>
+        </div>
+        <div id='trendingGrid' class='product-grid'></div>
+      </section>
+
+      <section class='container'>
+        <div class='section-head'>
+          <div>
+            <div class='eyebrow'>Journal</div>
+            <h2>Notes from the studio</h2>
+          </div>
+          <a class='text-link' href='collection.html'>Read the journal</a>
+        </div>
+        <div class='grid-3'>
+          <article class='journal-card' data-reveal>
+            <div class='journal-media' style='--g1: #e8d7c7; --g2: #a56f52;'>
+              <img class='media-image' src='https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?auto=format&fit=crop&w=1200&q=80' alt='Styling a modern living room'>
+            </div>
+            <div class='meta'>Styling</div>
+            <h3>Five ways to soften a modern living room</h3>
+          </article>
+          <article class='journal-card' data-reveal>
+            <div class='journal-media' style='--g1: #d7e1e9; --g2: #6c8a9d;'>
+              <img class='media-image' src='https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80' alt='Dinnerware palette'>
+            </div>
+            <div class='meta'>Entertaining</div>
+            <h3>The dinnerware palette for candlelit nights</h3>
+          </article>
+          <article class='journal-card' data-reveal>
+            <div class='journal-media' style='--g1: #dcd6cb; --g2: #7c6f63;'>
+              <img class='media-image' src='https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80' alt='Travel essentials'>
+            </div>
+            <div class='meta'>Travel</div>
+            <h3>Pack for comfort without losing style</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class='newsletter'>
+        <div class='container newsletter-inner'>
+          <div>
+            <div class='eyebrow'>Studio letters</div>
+            <h2>Get early access to new drops.</h2>
+            <p>Monthly edits, styling tips, and exclusive early releases.</p>
+          </div>
+          <form class='newsletter-form'>
+            <input type='email' placeholder='Email address' aria-label='Email address'>
+            <button class='btn ghost' type='submit'>Join</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class='site-footer'>
+      <div class='container footer-grid'>
+        <div>
+          <div class='brand'>Solace and Stone</div>
+          <p>Modern heirlooms for rooms that breathe.</p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <a href='collection.html?category=Living'>Living</a>
+          <a href='collection.html?category=Kitchen'>Kitchen</a>
+          <a href='collection.html?category=Bath'>Bath</a>
+          <a href='collection.html?category=Travel'>Travel</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href='collection.html'>About</a>
+          <a href='collection.html'>Journal</a>
+          <a href='collection.html'>Careers</a>
+          <a href='collection.html'>Sustainability</a>
+          <a href='admin.html'>Operations</a>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <a href='collection.html'>Shipping</a>
+          <a href='collection.html'>Returns</a>
+          <a href='collection.html'>FAQ</a>
+          <a href='collection.html'>Contact</a>
+        </div>
+      </div>
+      <div class='footer-bottom'>© 2026 Solace and Stone. All rights reserved.</div>
+    </footer>
+
+    <div class='toast' id='toast'>Added to cart</div>
+    <script src='js/data.js'></script>
+    <script src='js/config.js'></script>
+    <script src='js/app.js'></script>
+  </body>
+</html>

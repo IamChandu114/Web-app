@@ -1,0 +1,241 @@
+﻿<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Checkout | Solace and Stone</title>
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Space+Grotesk:wght@400;500;600&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' href='css/styles.css'>
+  </head>
+  <body>
+    <header class='site-header'>
+      <div class='top-banner'>Free shipping on orders over $200. 30-day returns.</div>
+      <div class='container'>
+        <div class='nav-row'>
+          <a class='brand' href='index.html'>Solace and Stone</a>
+          <nav class='primary-nav' aria-label='Primary'>
+            <a href='collection.html?category=Living'>Living</a>
+            <a href='collection.html?category=Kitchen'>Kitchen</a>
+            <a href='collection.html?category=Bath'>Bath</a>
+            <a href='collection.html?category=Travel'>Travel</a>
+            <a href='collection.html'>Shop All</a>
+          </nav>
+          <div class='nav-actions'>
+            <button class='icon-btn' data-search-toggle>Search</button>
+            <a class='icon-btn' href='account.html'>Account</a>
+            <a class='icon-btn' href='cart.html'>Cart <span class='cart-count' id='cartCount'>0</span></a>
+            <button class='icon-btn menu-btn' data-menu-toggle>Menu</button>
+          </div>
+        </div>
+        <div class='search-panel' id='searchPanel'>
+          <form class='search-form' data-search-form>
+            <input type='search' name='q' placeholder='Search the entire studio' aria-label='Search products'>
+            <button class='btn small' type='submit'>Search</button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class='container checkout'>
+        <div class='section-head'>
+          <div>
+            <div class='eyebrow'>Checkout</div>
+            <h1>Complete your order</h1>
+          </div>
+          <a class='text-link' href='cart.html'>Back to cart</a>
+        </div>
+        <div class='checkout-layout'>
+          <form class='checkout-form' id='checkoutForm'>
+            <h3>Contact</h3>
+            <input id='checkoutEmail' type='email' name='email' placeholder='Email address' required>
+            <h3>Shipping</h3>
+            <div class='form-grid'>
+              <input id='checkoutFirst' type='text' name='first' placeholder='First name' required>
+              <input id='checkoutLast' type='text' name='last' placeholder='Last name' required>
+            </div>
+            <div class='saved-address' id='savedAddressCard' style='display: none;'>
+              <div>
+                <strong>Saved address</strong>
+                <p class='meta' id='savedAddressText'></p>
+              </div>
+              <button class='btn ghost' type='button' id='useSavedAddress'>Use this address</button>
+            </div>
+            <input id='checkoutAddress' type='text' name='address' placeholder='Street address' required>
+            <input id='checkoutApartment' type='text' name='apartment' placeholder='Apartment, suite, etc'>
+            <div class='form-grid'>
+              <input id='checkoutCity' type='text' name='city' placeholder='City' required>
+              <input id='checkoutState' type='text' name='state' placeholder='State' required>
+            </div>
+            <div class='form-grid'>
+              <input id='checkoutZip' type='text' name='zip' placeholder='ZIP code' required>
+              <input id='checkoutCountry' type='text' name='country' placeholder='Country' value='United States' required>
+            </div>
+            <div class='shipping-options' id='shippingOptions'>
+              <label class='option-card'>
+                <input type='radio' name='shipping' value='standard' checked>
+                <div>
+                  <strong>Standard</strong>
+                  <span class='meta'>3-5 business days</span>
+                </div>
+                <span class='price' data-shipping-price='standard'>$0</span>
+              </label>
+              <label class='option-card'>
+                <input type='radio' name='shipping' value='express'>
+                <div>
+                  <strong>Express</strong>
+                  <span class='meta'>1-2 business days</span>
+                </div>
+                <span class='price' data-shipping-price='express'>$0</span>
+              </label>
+              <label class='option-card'>
+                <input type='radio' name='shipping' value='pickup'>
+                <div>
+                  <strong>Studio pickup</strong>
+                  <span class='meta'>Ready in 2 hours</span>
+                </div>
+                <span class='price' data-shipping-price='pickup'>Free</span>
+              </label>
+            </div>
+            <label class='check save-address'>
+              <input type='checkbox' id='saveAddress'>
+              <span>Save this address for next time</span>
+            </label>
+            <h3>Payment</h3>
+            <div class='payment-methods' id='paymentMethods'>
+              <label class='option-card'>
+                <input type='radio' name='payment' value='card' checked>
+                <div>
+                  <strong>Card</strong>
+                  <span class='meta'>Visa, Mastercard, Amex</span>
+                </div>
+              </label>
+              <label class='option-card'>
+                <input type='radio' name='payment' value='upi'>
+                <div>
+                  <strong>UPI</strong>
+                  <span class='meta'>Instant bank transfer</span>
+                </div>
+              </label>
+              <label class='option-card'>
+                <input type='radio' name='payment' value='paypal'>
+                <div>
+                  <strong>PayPal</strong>
+                  <span class='meta'>Pay with PayPal balance</span>
+                </div>
+              </label>
+              <label class='option-card'>
+                <input type='radio' name='payment' value='cod'>
+                <div>
+                  <strong>Cash on delivery</strong>
+                  <span class='meta'>Pay when it arrives</span>
+                </div>
+              </label>
+            </div>
+            <div class='payment-panels'>
+              <div class='payment-panel active' data-payment-panel='card'>
+                <input id='cardName' type='text' name='name' placeholder='Name on card'>
+                <div id='cardElement' class='card-element'></div>
+                <p class='meta card-errors' id='cardErrors'></p>
+                <div class='card-fallback' id='cardFallback'>
+                  <div class='form-grid'>
+                    <input id='cardNumber' type='text' name='card' placeholder='Card number'>
+                    <input id='cardExpiry' type='text' name='expiry' placeholder='MM/YY'>
+                  </div>
+                  <div class='form-grid'>
+                    <input id='cardCvc' type='text' name='cvc' placeholder='CVC'>
+                    <input id='cardPostal' type='text' name='postal' placeholder='Postal code'>
+                  </div>
+                </div>
+              </div>
+              <div class='payment-panel' data-payment-panel='upi'>
+                <input id='upiId' type='text' name='upi' placeholder='UPI ID (name@bank)'>
+              </div>
+              <div class='payment-panel' data-payment-panel='paypal'>
+                <input id='paypalEmail' type='email' name='paypal' placeholder='PayPal email'>
+              </div>
+              <div class='payment-panel' data-payment-panel='cod'>
+                <p class='meta'>Pay with cash or card when your order arrives. We will call before delivery.</p>
+              </div>
+            </div>
+            <div class='trust-stack'>
+              <div class='trust-item'>SSL secured checkout</div>
+              <div class='trust-item'>30-day returns</div>
+              <div class='trust-item'>24/7 order support</div>
+            </div>
+            <button class='btn primary' type='submit'>Place order</button>
+          </form>
+
+          <aside class='order-summary'>
+            <h3>Order summary</h3>
+            <div class='summary-items' id='checkoutItems'></div>
+            <div class='summary-row'>
+              <span>Subtotal</span>
+              <span id='checkoutSubtotal'>$0</span>
+            </div>
+            <div class='summary-row'>
+              <span>Shipping</span>
+              <span id='checkoutShipping'>Free</span>
+            </div>
+            <div class='summary-row'>
+              <span>Estimated delivery</span>
+              <span id='checkoutEta'>3-5 days</span>
+            </div>
+            <div class='summary-row'>
+              <span>Tax</span>
+              <span id='checkoutTax'>$0</span>
+            </div>
+            <div class='summary-row'>
+              <span>Points earned</span>
+              <span id='checkoutPoints'>0 pts</span>
+            </div>
+            <div class='summary-row'>
+              <strong>Total</strong>
+              <strong id='checkoutTotal'>$0</strong>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class='site-footer'>
+      <div class='container footer-grid'>
+        <div>
+          <div class='brand'>Solace and Stone</div>
+          <p>Modern heirlooms for rooms that breathe.</p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <a href='collection.html?category=Living'>Living</a>
+          <a href='collection.html?category=Kitchen'>Kitchen</a>
+          <a href='collection.html?category=Bath'>Bath</a>
+          <a href='collection.html?category=Travel'>Travel</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href='collection.html'>About</a>
+          <a href='collection.html'>Journal</a>
+          <a href='collection.html'>Careers</a>
+          <a href='collection.html'>Sustainability</a>
+          <a href='admin.html'>Operations</a>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <a href='collection.html'>Shipping</a>
+          <a href='collection.html'>Returns</a>
+          <a href='collection.html'>FAQ</a>
+          <a href='collection.html'>Contact</a>
+        </div>
+      </div>
+      <div class='footer-bottom'>© 2026 Solace and Stone. All rights reserved.</div>
+    </footer>
+
+    <div class='toast' id='toast'>Added to cart</div>
+    <script src='https://js.stripe.com/v3/'></script>
+    <script src='js/data.js'></script>
+    <script src='js/config.js'></script>
+    <script src='js/app.js'></script>
+  </body>
+</html>
