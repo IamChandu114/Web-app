@@ -36,7 +36,7 @@ A premium front-end ecommerce experience with account, loyalty, reviews, wishlis
    ```
 
 ## Stripe Test Card
-Use Stripe test card `4242 4242 4242 4242` with any future date and any CVC.
+Use Stripe test card  with any future date and any CVC.
 
 ## Tests
 Run:
