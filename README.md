@@ -21,12 +21,12 @@ Visit the Web https://web-app-nu-umber.vercel.app/
    copy server\.env.example server\.env
    ```
 3. Update `server/.env`:
-4. 
-5. Start the API:
+
+4. Start the API:
    ```
    npm run dev
    ```
-6. Configure the frontend in `js/config.js`:
+5. Configure the frontend in `js/config.js`:
    ```
    window.API_BASE = 'http://localhost:4000';
 
